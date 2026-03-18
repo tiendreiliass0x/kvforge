@@ -1,0 +1,18 @@
+[package]
+name = "kvforge-cuda"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "CUDA backend for KVForge codec engine"
+
+[features]
+default = []
+cuda = ["dep:cudarc"]
+
+[dependencies]
+kvforge-core = { workspace = true }
+kvforge-cpu = { workspace = true }
+cudarc = { workspace = true, optional = true }
+
+[build-dependencies]
+cc = { workspace = true }

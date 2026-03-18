@@ -1,0 +1,25 @@
+[package]
+name = "kvforge-cpu"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "CPU reference implementations for KVForge codec engine"
+
+[dependencies]
+kvforge-core = { workspace = true }
+ndarray = { workspace = true }
+nalgebra = { workspace = true }
+half = { workspace = true }
+constriction = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+bincode = { workspace = true }
+rand = { workspace = true }
+
+[dev-dependencies]
+approx = { workspace = true }
+criterion = { workspace = true }
+
+[[bench]]
+name = "codec_bench"
+harness = false

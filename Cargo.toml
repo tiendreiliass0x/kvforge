@@ -1,0 +1,35 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/kvforge-core",
+    "crates/kvforge-cpu",
+    "crates/kvforge-cuda",
+    "crates/kvforge-python",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+repository = "https://github.com/kvforge/kvforge"
+
+[workspace.dependencies]
+kvforge-core = { path = "crates/kvforge-core" }
+kvforge-cpu = { path = "crates/kvforge-cpu" }
+kvforge-cuda = { path = "crates/kvforge-cuda" }
+
+thiserror = "2.0"
+ndarray = "0.16"
+nalgebra = "0.33"
+half = { version = "2.4", features = ["serde"] }
+constriction = "0.4"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+bincode = "1.0"
+cudarc = "0.12"
+cc = "1.1"
+pyo3 = { version = "0.23", features = ["extension-module"] }
+numpy = "0.23"
+criterion = { version = "0.5", features = ["html_reports"] }
+approx = "0.5"
+rand = "0.8"

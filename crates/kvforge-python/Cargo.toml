@@ -1,0 +1,18 @@
+[package]
+name = "kvforge-python"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Python bindings for KVForge codec engine"
+
+[lib]
+name = "_kvforge"
+crate-type = ["cdylib"]
+
+[dependencies]
+kvforge-core = { workspace = true }
+kvforge-cpu = { workspace = true }
+pyo3 = { workspace = true }
+numpy = { workspace = true }
+ndarray = { workspace = true }
+bincode = { workspace = true }
